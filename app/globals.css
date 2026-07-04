@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-zinc-950: #050706;
+  --color-zinc-900: #0a0e0c;
+  --color-zinc-800: #121815;
+  --color-zinc-700: #1c2521;
+  --color-zinc-400: #7c9085;
+  --color-emerald-500: #10b981;
+  --color-emerald-400: #34d399;
+  --color-emerald-600: #059669;
+  
+  --animate-fade-in-up: fade-in-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050706;
+}
+::-webkit-scrollbar-thumb {
+  background: #121815;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1c2521;
+}
+
+body {
+  background: #050706;
+  color: #e6f7ef;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  letter-spacing: -0.015em;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Bento card base styling - Flat, Clean Dark obsidian look */
+.bento-card {
+  background: #0a0e0c;
+  border: 1px solid rgba(16, 185, 129, 0.035);
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Softer card hover - clean border color transition and minimal lift */
+.bento-card-hover:hover {
+  border-color: rgba(16, 185, 129, 0.15);
+  background: #0d1210;
+  transform: translateY(-2px);
+}
+
+/* Bento grid layout utilities */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+/* Selection Highlight */
+::selection {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+
