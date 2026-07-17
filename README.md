@@ -32,7 +32,7 @@ Ensure you have Node.js installed on your system.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/tusharkr7/portfolio.git
+   git clone [https://github.com/tusharkr7/tusharkr7.github.io.git]
    cd portfolio
    ```
 
